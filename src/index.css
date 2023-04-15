@@ -33,6 +33,10 @@ h2 {
   color: #0290ff;
 }
 
+h2:hover {
+  color: darkorange;
+}
+
 .nav-links {
   display: flex;
   gap: 2.3rem;
