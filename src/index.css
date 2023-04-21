@@ -55,3 +55,8 @@ h2 {
 .nav-links li {
   list-style: none;
 }
+
+.nav-links
+li:hover {
+  color: rgb(170, 15, 15)
+}
