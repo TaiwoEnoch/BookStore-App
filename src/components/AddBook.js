@@ -6,7 +6,6 @@ import { addBook, postBooks } from '../redux/books/booksSlice';
 import './addBook.css';
 
 const AddBook = () => {
-  const [inputValue, setInputValue] = useState('');
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.categories.categories);
   const [author, setAuthor] = useState('');
@@ -14,7 +13,6 @@ const AddBook = () => {
   const [category, setCategory] = useState('');
   const getNewBook = (e) => {
     e.preventDefault();
-    setInputValue('');
     const newBook = {
       item_id: uuid(),
       title,
@@ -24,11 +22,9 @@ const AddBook = () => {
     dispatch(addBook(newBook));
     dispatch(postBooks(newBook));
   };
-  
-  const clearForm = (event) => {
-    setInputValue(event.target.value);
+  const clearForm = (e) => {
+    getNewBook(e.target.value);
   };
-
 
   return (
     <>

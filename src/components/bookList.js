@@ -10,7 +10,7 @@ const BooksList = () => {
 
   useEffect(() => {
     dispatch(fetchBooks());
-  }, []);
+  }, [dispatch]);
 
   const bookData = (Object.entries(booksObject));
   return (
