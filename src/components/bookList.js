@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBooks } from '../redux/books/booksSlice';
 import BookItem from './bookItem';
+import './bookList.css';
 
 const BooksList = () => {
   const dispatch = useDispatch();
@@ -9,7 +10,7 @@ const BooksList = () => {
 
   useEffect(() => {
     dispatch(fetchBooks());
-  }, [dispatch]);
+  }, []);
 
   const bookData = (Object.entries(booksObject));
   return (
