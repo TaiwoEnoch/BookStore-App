@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import { useDispatch, useSelector } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { addBook, postBooks } from '../redux/books/booksSlice';
 
-function AddBook() {
+const AddBook = () => {
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.categories.categories);
   const [author, setAuthor] = useState('');
@@ -12,17 +12,18 @@ function AddBook() {
   const getNewBook = (e) => {
     e.preventDefault();
     const newBook = {
-      id: uuid(),
+      item_id: uuid(),
       title,
-      category,
+      category: category || categories[0],
       author,
     };
     dispatch(addBook(newBook));
+    dispatch(postBooks(newBook));
   };
 
   return (
     <form className="add-book-form">
-      <span>Add New Book</span>
+      <span>ADD NEW BOOK</span>
       <input onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Book title" />
       <select>
         { categories.map((category) => (
@@ -44,6 +45,6 @@ function AddBook() {
       </button>
     </form>
   );
-}
+};
 
 export default AddBook;
