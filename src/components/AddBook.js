@@ -22,7 +22,7 @@ function AddBook() {
 
   return (
     <form className="add-book-form">
-      <span>ADD NEW BOOK</span>
+      <span>Add New Book</span>
       <input onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Book title" />
       <select>
         { categories.map((category) => (

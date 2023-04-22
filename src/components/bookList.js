@@ -18,7 +18,7 @@ function BooksList() {
   };
   return (
     <div>
-      <h1>All Books</h1>
+      <h2>ALL BOOKS</h2>
       <form
         onSubmit={(e) => performFilter(e)}
         className="filter-form"

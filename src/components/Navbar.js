@@ -8,7 +8,7 @@ function Navbar() {
   ];
   return (
     <nav className="navbar">
-      <h1>Bookstore CMS</h1>
+      <h2>BOOKSTORE CMS</h2>
       <ul className="nav-links">
         {links.map((link) => (
           <li key={link.name}><NavLink to={link.path}>{link.name}</NavLink></li>
