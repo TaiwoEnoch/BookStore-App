@@ -1,46 +1,27 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchBooks } from '../redux/books/booksSlice';
 import BookItem from './bookItem';
 
-function BooksList() {
-  let booksArray = useSelector((store) => store.books).books;
-  const categoriesList = useSelector((store) => store.categories).categories;
+const BooksList = () => {
+  const dispatch = useDispatch();
+  const booksObject = useSelector((store) => store.books).books;
 
-  const performFilter = (e) => {
-    e.preventDefault();
-    const selectedCategory = e.target[0].value;
-    if (categoriesList.includes(selectedCategory)) {
-      if (booksArray.find((book) => book.category === selectedCategory)) {
-        booksArray = booksArray.find((book) => book.category === selectedCategory);
-        booksArray = [];
-      }
-    }
-  };
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
+
+  const bookData = (Object.entries(booksObject));
   return (
-    <div>
-      <h2>ALL BOOKS</h2>
-      <form
-        onSubmit={(e) => performFilter(e)}
-        className="filter-form"
-      >
-        <select>
-          {
-            categoriesList.map((category) => (
-              <option key={category} value={category}>{category}</option>
-            ))
-          }
-        </select>
-        <button type="submit">filter by category</button>
-      </form>
+    <div className="books-list-wrap">
       {
-        booksArray.map((book) => (
-          <div key={book.id}>
-            <BookItem book={JSON.stringify(book)} />
-          </div>
-        ))
+        bookData.map(
+          (book) => <BookItem key={book[0]} id={book[0]} book={JSON.stringify(book[1][0])} />,
+        )
       }
     </div>
   );
-}
+};
 
 export default BooksList;
