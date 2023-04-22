@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import BooksList from '../components/bookList';
-import AddBook from '../components/addBook.js';
+import AddBook from '../components/addBook';
 import { clearBooks } from '../redux/books/booksSlice';
 
 function Books() {
