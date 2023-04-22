@@ -4,7 +4,7 @@ import BooksList from '../components/bookList';
 import AddBook from '../components/addBook';
 import { clearBooks } from '../redux/books/booksSlice';
 
-function Books() {
+const Books = () => {
   const dispatch = useDispatch();
   return (
     <div>
@@ -18,6 +18,6 @@ function Books() {
       </button>
     </div>
   );
-}
+};
 
 export default Books;
