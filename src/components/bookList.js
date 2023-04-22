@@ -12,10 +12,6 @@ function BooksList() {
     if (categoriesList.includes(selectedCategory)) {
       if (booksArray.find((book) => book.category === selectedCategory)) {
         booksArray = booksArray.find((book) => book.category === selectedCategory);
-        // console.log(booksArray);
-        // <BooksList />
-      } else {
-        // console.log('No books found in this category');
         booksArray = [];
       }
     }

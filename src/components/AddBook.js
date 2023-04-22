@@ -17,7 +17,6 @@ function AddBook() {
       category,
       author,
     };
-    // console.log(newBook);
     dispatch(addBook(newBook));
   };
 
