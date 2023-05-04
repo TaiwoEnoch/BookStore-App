@@ -1,7 +1,10 @@
 <a name="readme-top"></a>
 ![](https://img.shields.io/badge/BOOKSTORE-skyblue)
 
+ development
 # 📗 Table of Contents
+
+# Working towards react
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
