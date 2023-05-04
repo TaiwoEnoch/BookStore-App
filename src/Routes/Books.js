@@ -1,6 +1,6 @@
 import React from 'react';
 import BooksList from '../components/bookList';
-import AddBook from '../components/addBook';
+import AddBook from '../components/AddBook';
 
 const Books = () => (
   <div className="container">

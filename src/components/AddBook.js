@@ -11,6 +11,7 @@ const AddBook = () => {
   const [author, setAuthor] = useState('');
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
+
   const getNewBook = (e) => {
     e.preventDefault();
     const newBook = {
@@ -21,26 +22,32 @@ const AddBook = () => {
     };
     dispatch(addBook(newBook));
     dispatch(postBooks(newBook));
+    clearForm();
   };
-  const clearForm = (e) => {
-    getNewBook(e.target.value);
+
+  const clearForm = () => {
+    setTitle('');
+    setCategory('');
+    setAuthor('');
   };
 
   return (
     <>
       <div className="Line" />
       <span className="add-book-title">ADD NEW BOOK</span>
-      <form className="add-book-form" onSubmit={(e) => clearForm(e)}>
+      <form className="add-book-form" onSubmit={(e) => getNewBook(e)}>
         <input
           onChange={(e) => {
             setTitle(e.target.value);
           }}
           type="text"
+          value={title}
           placeholder="Book title"
           className="title-input"
         />
         <select
           onChange={(e) => setCategory(e.target.value)}
+          value={category}
           className="categories-select"
         >
           { categories.map((category) => (
@@ -57,19 +64,18 @@ const AddBook = () => {
             setAuthor(e.target.value);
           }}
           type="name"
+          value={author}
           placeholder="Author"
           className="author-input"
         />
         <button
           type="submit"
-          onClick={(e) => getNewBook(e)}
           className="add-book-btn"
         >
           Add Book
         </button>
       </form>
     </>
-
   );
 };
 
