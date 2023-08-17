@@ -40,7 +40,6 @@ The Bookstore is a website that allows the user to;
 
 - React and redux
 - Visual Studio Code
-- Git & Github
 
 ### Key Features
 
