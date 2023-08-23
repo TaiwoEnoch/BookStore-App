@@ -75,7 +75,7 @@ To run tests, run the following command:
 
 ### Future Features
 
-- Add more css properties
+- Add more CSS properties
 - Add more react and redux functionalities
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
