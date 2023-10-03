@@ -51,7 +51,7 @@ The Bookstore is a website that allows the user to;
 To get a local copy up and running follow these simple example steps.
 
 - Open terminal
-- Clone this project by the command `git clone https://github.com/TaiwoEnoch/BookStore-App.git`
+- Clone the project by the command `git clone https://github.com/TaiwoEnoch/BookStore-App.git`
 - `cd <clone>` folder
 - Run `npm start` in your local browser or using Live Server in Visual Studio Code.
 
@@ -59,7 +59,7 @@ To get a local copy up and running follow these simple example steps.
 
 - IDE to edit and run the code (We use Visual Studio Code 🔥).
 - [Node.js](https://nodejs.org/en/download/) already downloaded.
-- Create React App - [click here to getting started](https://create-react-app.dev/docs/getting-started).
+- Create React App - [click here to get started](https://create-react-app.dev/docs/getting-started).
 
 ### Setup
 
