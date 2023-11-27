@@ -105,7 +105,6 @@ If you like this project you can give it a ⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- Inspiration 💘
 - Microverse program ⚡
 - My standup team 🏹
 - My family's support 🙌
