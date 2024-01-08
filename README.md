@@ -38,7 +38,7 @@ The Bookstore is a website that allows the user to;
 
 ## 🛠 Built With <a name="built-with"></a>
 
-- React and redux
+- Reactjs and redux
 
 ### Key Features
 
