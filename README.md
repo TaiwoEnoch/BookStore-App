@@ -63,7 +63,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-Clone this repository to your desired folder:
+Clone this repository to your desired folder on your local machine:
 cd my-folder
 git clone https://github.com/TaiwoEnoch/BookStore-App.git
 
