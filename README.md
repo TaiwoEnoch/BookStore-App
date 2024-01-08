@@ -107,7 +107,6 @@ If you like this project you can give it a ⭐️.
 
 - Microverse program ⚡
 - My standup team 🏹
-- My family's support 🙌
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
