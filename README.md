@@ -29,7 +29,7 @@
 
 # Bookstore App
 
-The Bookstore is a website that allows the user to;
+The Bookstore is an awesome website that allows users to;
 
 - Display a list of books
 - Add a book
